@@ -1,0 +1,22 @@
+Disculpa si mi explicación anterior no fue lo suficientemente clara.
+Permíteme darte una explicación más detallada sobre cómo funciona el ejemplo del archivo de texto utilizando un generador con yield.
+
+Cuando trabajas con archivos grandes, 
+puede ser difícil y poco práctico leer todo el archivo en memoria de una sola vez.
+Por ejemplo, si tienes un archivo de texto de varios gigabytes,
+cargar todo el archivo en memoria podría agotar la memoria disponible en tu sistema, 
+lo que dificultaría o incluso imposibilitaría el procesamiento del archivo. Para solucionar este problema,
+puedes utilizar un generador con la función yield para leer y procesar el archivo línea por línea, 
+lo que te permite trabajar con el archivo de manera incremental y no tener que cargar todo el archivo en memoria de una sola vez.
+
+En el ejemplo que te proporcioné anteriormente,
+
+la función leer_archivo() es un generador que lee un archivo de texto línea por línea y genera cada línea
+como un valor utilizando yield. El código dentro de la función se ejecuta solo cuando se llama al generador,
+y se detiene en la instrucción yield para generar la línea hola actual como un valor. El valor generado se devuel
+e al código que llama al generador, y el generador se pausa en la instrucción yield hasta que se llama de nuevo.
+
+Cuando usas un generador con la función yield para leer un archivo de texto grande,
+el archivo se lee y procesa línea por línea a medida que el generador es llamado, en lugar de cargar todo el 
+archivo en memoria de una sola vez. Por lo tanto, puedes trabajar con el archivo de manera eficiente, 
+incluso si es muy grande.
